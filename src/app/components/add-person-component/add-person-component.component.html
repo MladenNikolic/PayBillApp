@@ -1,0 +1,7 @@
+<form [formGroup]="personForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label for="name">Add person:</label>
+        <input type="text" id="name" formControlName="name" class="form-control" required>
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]="!personForm.valid">Add</button>
+</form>
